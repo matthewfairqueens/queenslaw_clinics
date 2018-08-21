@@ -16,9 +16,17 @@ function queenslaw_clinics_preprocess_node(&$variables) {
 /**
  * Implements template_preprocess_links().
  *
- * Change the "Read more" text.
+ * If the "Teaser CTA" field isn't empty, change the "Read more" text to that.
  */
 function queenslaw_clinics_preprocess_links(&$variables) {
-  $title = t('View All Services') . '<span>...</span>';
-  $variables['links']['node-readmore']['link']['#title'] = \Drupal\Core\Render\Markup::create($title);
+  if (isset($variables['links']) && (isset($variables['links']['node-readmore'])) && (isset($variables['links']['node-readmore']['link'])) && (isset($variables['links']['node-readmore']['link']['#title']))) {
+    $title = $variables['links']['node-readmore']['link']['#title'];
+    if ($entity = $variables['links']['node-readmore']['link']['#url']->getOption('entity')) {
+      if ($entity->hasField('field_teaser_cta')) {
+        if ($teaser_cta = $entity->get('field_teaser_cta')->value) $title = $teaser_cta;
+      }
+    }
+    $title .= '<span>...</span>';
+    $variables['links']['node-readmore']['link']['#title'] = \Drupal\Core\Render\Markup::create($title);
+  }
 }
