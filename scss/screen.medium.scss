@@ -1,0 +1,74 @@
+#header {
+  > div {
+    .header-content {
+      #block-mainnavigation {
+        > ul {
+          margin: 20px 0;
+        }
+        .small-screen-nav-trigger {
+          top: 35px;
+        }
+        .small-screen-nav-submenu-trigger {
+          display: none !important;
+        }
+      }
+      .block-backtoqueenslawclinics {
+        top: 12px;
+      }
+    }
+    #branding {
+      top: 0;
+      .block-logo svg {
+        padding-top: 0;
+        max-width: 100%;
+      }
+    }
+  } 
+}
+
+body.front {
+  #header {
+    > div {
+      #branding {
+        padding-bottom: 0;
+      }
+      .header-content {
+        #block-mainnavigation {
+          > ul {
+            margin: 20px 0 0 0;
+          }
+          .small-screen-nav-submenu-trigger {
+            display: block !important;
+          }
+        }
+      }
+    }
+  }
+  #main {
+    .queenslaw-teasers {
+      .teaser {
+        .teaser-image {
+          right: 50%;
+        }
+        article {
+          padding-left: 50%;
+        }
+      }
+      .teaser:nth-child(even) {
+        .teaser-image {
+          left: 50%;
+        }
+        article {
+          padding-right: 50%;
+          + ul {
+            padding-right: 50%;
+          }
+          ul.links.inline {
+            right: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+

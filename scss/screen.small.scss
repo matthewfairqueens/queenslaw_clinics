@@ -1,0 +1,97 @@
+#superheader {
+  .block-backtoqueensuniversityfacultyoflaw {
+    a {
+      font-size: 14px;
+    }
+    > div {
+      padding: 0;
+    }
+  }
+}
+
+#header {
+  height: auto;
+  > div {
+    #branding {
+      display: block;
+      max-width: 75%;
+      margin: 30px 0 0 20px;
+      padding: 0;
+      svg {
+        max-width: 100% !important;
+      }
+    }
+    .block-backtoqueenslawclinics {
+      right: 20px;
+    }
+    .header-content {
+      #block-mainnavigation {
+        .small-screen-nav-trigger {
+          top: 45px;
+        }
+      }
+    }
+  }
+}
+
+body.front {
+  #header {
+    > div {
+      #branding {
+        margin: 20px 0 0 20px;
+        svg {
+          max-width: 100% !important;
+        }
+      }
+      .header-content {
+        #block-mainnavigation {
+          .small-screen-nav-trigger {
+            top: 35px;
+          }
+        }
+      }
+    }
+  }
+  #main {
+    .queenslaw-teasers {
+      .teaser {
+        min-height: 0;
+        .teaser-image {
+          right: 0;
+          height: 200px;
+          display: block;
+        }
+        article {
+          padding-left: 0;
+          padding-top: 220px;
+          > .fields {
+            padding: 0 20px;
+          }
+        }
+      }
+      .teaser:nth-child(even) {
+        .teaser-image {
+          left: 0;
+          height: 200px;
+          display: block;
+        }
+        article {
+          padding-right: 0;
+          padding-top: 220px;
+          + ul {
+            padding-right: 0;
+          }
+          ul.links.inline {
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+body.sidebar-first .block-views-block-people-block article ul.links, 
+body.sidebar-first .block-queenslaw-people article ul.links {
+  width: 100%;
+}
+
