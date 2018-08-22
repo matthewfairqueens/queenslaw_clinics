@@ -3,3 +3,5 @@ global:
   css:
     theme:
       css/screen.css: {media: screen}
+      css/screen.medium.css: {media: screen and (max-width: 959px)}
+      css/screen.small.css: {media: screen and (max-width: 639px)}
